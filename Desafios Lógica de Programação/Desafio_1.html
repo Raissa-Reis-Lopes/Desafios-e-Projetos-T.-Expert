@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //a1 até a6 representam a nota obtida por cada respectivo aluno após uma prova que teve como pontuaçã máxima 5 pontos
+    //Desafio: Escrever um programa que imprima os seguintes resultados:
+    /* 
+1. A média das notas dos alunos
+2. A taxa de acerto (porcentagem)
+3. O nome de um aluno aleatoriamente
+4. Os nomes de alunos com nota menor que 3 com status "Reforço"
+5. Os nome de alunos com nota maior que 4 com status "Estágio"  */
+
+    let a1, a2, a3, a4, a5, a6, nome1, nome2, nome3, nome4, nome5, nome6;
+    a1 = 3;
+    a2 = 4;
+    a3 = 2;
+    a4 = 2;
+    a5 = 1;
+    a6 = 5;
+    nome1 = "Pedro";
+    nome2 = "Maria";
+    nome3 = "Juliana";
+    nome4 = "Fernando";
+    nome5 = "Rita";
+    nome6 = "Roque";
+
+    function media() {
+      nota = (a1 + a2 + a3 + a4 + a5 + a6) / 6;
+      console.log(`A média das notas dos alunos foi ${nota}`);
+    }
+    media();
+
+    function taxaAcerto() {
+      console.log(`A taxa de acerto de: ${nome1} foi de ${(a1 / 5) * 100}%; 
+A taxa de acerto de: ${nome1} foi de ${(a1 / 5) * 100}%
+A taxa de acerto de: ${nome2} foi de ${(a2 / 5) * 100}%
+A taxa de acerto de: ${nome3} foi de ${(a3 / 5) * 100}%
+A taxa de acerto de: ${nome4} foi de ${(a4 / 5) * 100}%
+A taxa de acerto de: ${nome5} foi de ${(a5 / 5) * 100}%
+A taxa de acerto de: ${nome6} foi de ${(a6 / 5) * 100}%`);
+    }
+    taxaAcerto();
+
+    n = parseInt(Math.random() * 6);
+    var nomes = ["Pedro", "Maria", "Juliana", "Fernando", "Rita", "Roque"];
+    console.log(nomes[n]);
+    
+    let notas = [["Pedro", 3],["Maria", 4],["Juliana", 2],["Fernando", 2],["Rita", 1], ["Roque", 5]];
+    
+
+    //Não consegui resolver a última!!
+    if (notas[1]<3) {
+        console.log(`${notas[1]} Reforço`);
+    } else {
+        console.log(`${notas[1]} Estágio`);
+    }
+
+
+    
+  </script>
+</html>
