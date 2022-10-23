@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Desafio 2 resolução professor</title>
+</head>
+<body> </body>
+<script>
+let d1,d2,sorteio1,sorteio2,mensagem, acumula
+acumula = 0
+
+function jogo(){
+sorteio1 = parseInt(Math.random()*6 +1)
+sorteio2 = parseInt(Math.random()*6 +1)
+d1 = sorteio1 
+d2 = sorteio2
+soma = d1+d2
+soma % 2 == 0 ? mensagem = "PAR" : mensagem = "ÍMPAR"
+mensagem == "PAR" ? acumula++ : null
+console.log(sorteio1 + '-' + sorteio2 + ': ' + (d1+d2) + ': ' + mensagem +'-' + acumula); 
+}
+
+for(var i= 0;i<6;i++){
+jogo();
+}
+
+acumula >=4 ? mensagem = "Você ganhou!" : mensagem = "Não foi dessa vez :( "
+console.log(mensagem);
+
+
+
+
+
+</script>
+</html>
