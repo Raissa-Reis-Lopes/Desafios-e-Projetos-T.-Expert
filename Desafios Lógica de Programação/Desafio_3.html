@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+    Dadas as variáveis
+
+    numdaSorte, mensagem
+
+    Onde numDaSorte é um número aleatório resultado da chamada de uma função que parametriza outro número que tem como objetivo ser o mesmo do número sorteado
+
+    Desafio:
+
+    1. Escrever um programa que execute o número aleatório uma única vez
+    2. Chamar a função por intermédio do console do navegador, passando um número de palpite do número sorteado
+
+    3. Escrever três alternativas para mensagem:
+
+    a. "Tente um número menor"
+    b "Tente um número maior"
+    c "Parabéns você acertou"
+
+    4. O limite de tentativa é 6. Quando as tentativas se esgotarem escreva na mensagem: "Não foi desa vez"
+
+    Dica: Para testar o desafio no console, não rearregue a página, apenas pressione enter após escrever a chamada da função
+    */
+
+    //Na função que criamos tem que chegar um tempo em que ela para, pois só  podemos ter 6 palpites, por isso precisamos de um acumulador que vamos chamar de acumula. Então, toda vez que a função for executada, um valor vai ser acumulado
+
+    let numDaSorte, mensagem, acumula;
+    acumula = 0;
+
+    function sorteio() {
+      numDaSorte = parseInt(Math.random() * 5 + 1);
+    }
+    sorteio();
+
+   
+
+    function palpite(n) {
+         var n = prompt("Digite o seu palpite");
+      if (acumula >= 6) {
+        mensagem = alert("Tentativas esgotadas");
+      } else {
+        if (n == numDaSorte) {
+          mensagem = alert("Você ganhou");
+        } else if (numDaSorte < n) {
+          mensagem = alert("Tente um número menor");
+        } else if (numDaSorte > n) {
+          mensagem = alert("Tente um número maior");
+        } else {
+          mensagem = alert("Não foi dessa vez");
+        }
+      } palpite();
+      acumula++;
+      return mensagem;
+    } palpite();
+   
+  </script>
+</html>
