@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+    Desafio:
+     Faça um fluxograma do seguinte algoritmo:
+
+     Dadas as variáveis 
+
+     a=12, b = 45, c=47
+
+
+    Crie um programa que leia as A, B e C e imprima os resultados em ordem decrescente
+    */
+
+    let a, b, c;
+    a = 12;
+    b = 45;
+    c = 47;
+
+    let numeros = [a, b, c];
+
+    numeros.sort(function (a, b) {
+      if (a > b) return -1;
+      if (a < b) return 1;
+      return 0;
+    });
+
+    console.log(numeros);
+
+    /*Alterei a lógica do .sort se colocasse em ordem crescente bastava manter a ordem da lógica do .sort
+ 
+let a,b,c
+    a = 12
+    b = 45
+    c = 47
+let numeros = [a, b, c]
+
+numeros.sort(function(a,b){
+    if(a > b) return -1;
+    if (a < b) return 1;
+    return 0;
+});
+
+console.log(numeros) */
+  </script>
+</html>
