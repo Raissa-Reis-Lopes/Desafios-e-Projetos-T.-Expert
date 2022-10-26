@@ -41,26 +41,22 @@
     }
     sorteio();
 
-   
-
     function palpite(n) {
-         var n = prompt("Digite o seu palpite");
       if (acumula >= 6) {
-        mensagem = alert("Tentativas esgotadas");
+        mensagem = "Tentativas esgotadas";
       } else {
         if (n == numDaSorte) {
-          mensagem = alert("Você ganhou");
+          mensagem = "Você ganhou";
         } else if (numDaSorte < n) {
-          mensagem = alert("Tente um número menor");
+          mensagem = "Tente um número menor";
         } else if (numDaSorte > n) {
-          mensagem = alert("Tente um número maior");
+          mensagem = "Tente um número maior";
         } else {
-          mensagem = alert("Não foi dessa vez");
+          mensagem = "Não foi dessa vez";
         }
-      } palpite();
+      }
       acumula++;
       return mensagem;
-    } palpite();
-   
+    }
   </script>
 </html>
